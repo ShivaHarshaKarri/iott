@@ -1,0 +1,49 @@
+<div class="container chartDivLayout">
+  <div class="row" style="margin:0px;">
+    <div class="col-6">
+        <div class="chartDiv card">
+            <div class="blue" style="background: #2368a0;text-align: center;color:white;padding:7px;width: 100%">
+             Zone 1
+             </div>
+            <chart [options]="line" (load)="saveInstance($event.context)"></chart>
+          </div>
+    </div>
+    <div class="col-6">
+        <div class="chartDiv1 card">
+            <div class="blue" style="background: #2368a0;text-align: center;color:white;padding:7px;width: 100%">
+                Zone 2
+                </div>
+            <chart [options]="line1" (load)="saveInstance1($event.context)"></chart>
+          </div>
+    </div>
+  </div>
+  <div class="row" style="margin:0px;">
+      <div class="blue" style="background: #2368a0;text-align: center;color:white;padding:7px;width: 100%">
+          #TotalOverview
+          </div>
+          <div class="col-3">
+              <div class="chartDiv1 ">
+                <app-chart2></app-chart2>
+                  <!-- <chart [options]="line1" (load)="saveInstance1($event.context)"></chart> -->
+                </div>
+          </div>
+          <div class="col-3">
+              <div class="chartDiv1 ">
+                <app-chart></app-chart>
+                  <!-- <chart [options]="line1" (load)="saveInstance1($event.context)"></chart> -->
+                </div>
+          </div>
+          <div class="col-3">
+              <div class="chartDiv1 ">
+                <app-chart22></app-chart22>
+                  <!-- <chart [options]="line1" (load)="saveInstance1($event.context)"></chart> -->
+                </div>
+          </div>
+          <div class="col-3">
+              <div class="chartDiv1 ">
+                  <app-chart44></app-chart44>
+                  <!-- <chart [options]="line1" (load)="saveInstance1($event.context)"></chart> -->
+                </div>
+          </div>
+  </div>
+</div> 

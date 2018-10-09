@@ -1,0 +1,27 @@
+<div class="chartDivLayout" >
+    <div class="row" style="margin:0px;">
+      <div class="col-8 " >
+        <style>
+          .highcharts-root{
+            height: 300px;
+          }
+          </style>
+        <div class="chartDiv card">
+          <div class="blue" style="background: #2368a0;text-align: center;color:white;padding:7px;width: 100%">
+            Zone -2
+          </div>
+          <chart [options]="line" (load)="saveInstance($event.context)"></chart>
+        </div>
+      </div> 
+      <div class="col-4" style="height: 490px">
+        <div class="chartDiv">
+            <div class="blue" style="background: #2368a0;text-align: center;color:white;padding:7px;width: 100%">
+                Zone -2 Moisture Content
+              </div>
+              <app-activity-solid-gauge1></app-activity-solid-gauge1>
+            <!-- <app-chart></app-chart> -->
+      </div>   
+    </div>
+</div>
+</div>
+<!-- <app-chart2></app-chart2> -->

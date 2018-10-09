@@ -1,0 +1,117 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="mainlayout">
+  <mat-toolbar class="main_toolBar">
+    <span>
+      <div class="toggle-icon">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon svgIcon="menu"></mat-icon>
+        </button>
+      </div>
+    </span>
+    <a routerLink="/overview"><mat-icon svgIcon="home"></mat-icon></a>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Miracle Drip Irrigation</span>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+
+      <!-- <mat-toolbar class="sidenav_tool">
+        <span class="tIcon"><mat-icon svgIcon="multi_chart"></mat-icon></span>
+        <span>Chart Types</span>
+      </mat-toolbar> -->
+
+      <mat-accordion class="side_expansion">
+        <mat-expansion-panel class="cont">
+            <mat-expansion-panel-header>
+              Home
+            </mat-expansion-panel-header>
+            <mat-nav-list class="chartList">
+            <a mat-list-item routerLink="/forecast">Forecast</a>
+            <a mat-list-item routerLink="/totalfieldsComponent">TotalFields</a>
+            <!-- <a mat-list-item routerLink="/solidGauge">Overview</a> -->
+            <!-- <a mat-list-item routerLink="/activityGauge">overview2</a> -->
+            <!-- <a mat-list-item routerLink="/activityGauge1">Activity Gauge2</a> -->
+            <!-- <a mat-list-item routerLink="/temperature">temperatureguage</a> -->
+            <!-- <a mat-list-item routerLink="/humidity">Humidity</a> -->
+             </mat-nav-list>
+        </mat-expansion-panel>
+
+       
+
+        <mat-expansion-panel class="cont" >
+            <mat-expansion-panel-header>
+              Fields
+            </mat-expansion-panel-header>
+            <mat-nav-list class="chartList">
+              <a mat-list-item routerLink="/dynamicLine">Field-1</a>
+            <a mat-list-item routerLink="/dynamicLine1">Field-2</a>
+            </mat-nav-list>
+
+        <!-- </mat-expansion-panel>
+
+        <mat-expansion-panel > -->
+
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+
+      <div class="logout" routerLink="/overview">
+          Log Out
+      </div>
+      <div class="imgContainer">
+        <img src="assets/Miracle-logo.png" style="height: 40px" alt="">
+      </div>
+         
+      <style>
+        .cont{
+          background: #232527;
+          color: white;
+        }
+        .mat-nav-list .mat-list-item{
+          color: white;
+        }
+        .imgContainer{
+          text-align: center;
+          padding-top: 15px;
+        }
+        .logout:active{
+          outline: none;
+        }
+        .logout:focus{
+          outline: none;
+        }
+        .logout {
+          cursor: pointer;
+          background: #232527;
+    color: white;
+    width: 100%;
+    
+    text-align: left;
+    padding-left: 23px;
+    font-size: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+        }
+        .example-sidenav[_ngcontent-c0] {
+    width: auto;
+    background-color: #232527;
+}
+      </style>
+              
+        
+                
+      
+      
+
+    </mat-drawer>
+
+
+    <div class="chart-content">
+        <router-outlet></router-outlet>
+       
+    </div>
+  </mat-drawer-container>
+</div>
